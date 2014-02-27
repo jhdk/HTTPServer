@@ -25,15 +25,30 @@ namespace SocketConcurrent
             sw.AutoFlush = true; // enable automatic flushing
 
             string message = sr.ReadLine();
-            string answer;
-            while (message != null && message != "")
-            {
-                Console.WriteLine("Client: " + message);
-                answer = message.ToUpper();
-                sw.WriteLine(answer);
-                message = sr.ReadLine();
 
-            }
+
+            Console.WriteLine(message);
+
+            string[] words = message.Split('/');
+            message = words[1];
+            words = message.Split(' ');
+            message = words[0];
+
+                Console.WriteLine(message);
+
+                sw.Write("HTTP/1.0 200 OK \r\n");
+                sw.Write("\r\n");
+                sw.WriteLine("You requested: " + message);
+
+
+            //while (message != null && message != "")
+            //{
+            //    Console.WriteLine(message);
+            //    answer = message.ToUpper();
+            //    message = sr.ReadLine();
+
+            //}
+
             connectionSocket.Close();
         }
 

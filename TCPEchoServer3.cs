@@ -13,8 +13,8 @@ namespace SocketConcurrent
     {
         public static void Main(string[] args)
         {
-            IPAddress ip = IPAddress.Parse("127.0.0.1");
-            TcpListener serverSocket = new TcpListener(ip, 6789);
+            IPAddress ip = IPAddress.Parse("10.154.1.95");
+            TcpListener serverSocket = new TcpListener(8080);
 
             //TcpListener serverSocket = new TcpListener(6789);
             serverSocket.Start();
