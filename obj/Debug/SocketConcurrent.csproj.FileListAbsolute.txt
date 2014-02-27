@@ -1,0 +1,12 @@
+C:\D Drive\Undervisning\CodsC#\Solutions\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.exe.config
+C:\D Drive\Undervisning\CodsC#\Solutions\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.exe
+C:\D Drive\Undervisning\CodsC#\Solutions\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.pdb
+C:\D Drive\Undervisning\CodsC#\Solutions\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.exe
+C:\D Drive\Undervisning\CodsC#\Solutions\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.pdb
+C:\D Drive\Undervisning\CodsC#\Solutions\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.csprojResolveAssemblyReference.cache
+C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.exe.config
+C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.exe
+C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.pdb
+C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.exe
+C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.pdb
+C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.csprojResolveAssemblyReference.cache
