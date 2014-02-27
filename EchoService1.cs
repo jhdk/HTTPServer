@@ -30,6 +30,7 @@ namespace SocketConcurrent
             sw.Write("HTTP/1.0 200 OK \r\n");
             sw.Write("\r\n");
             sw.WriteLine("Message");
+            sw.WriteLine("Hello");
             //while (message != null && message != "")
             //{
             //    Console.WriteLine("Client: " + message);
