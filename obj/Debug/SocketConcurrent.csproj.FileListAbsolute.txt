@@ -28,3 +28,6 @@ C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\ob
 C:\Users\LasseSkjøtt\Desktop\HTTPServer123\bin\Debug\SocketConcurrent.exe.config
 C:\Users\LasseSkjøtt\Desktop\HTTPServer123\obj\Debug\SocketConcurrent.exe
 C:\Users\LasseSkjøtt\Desktop\HTTPServer123\obj\Debug\SocketConcurrent.pdb
+C:\Users\LasseSkjøtt\Desktop\HTTPServer123\bin\Debug\SocketConcurrent.exe
+C:\Users\LasseSkjøtt\Desktop\HTTPServer123\bin\Debug\SocketConcurrent.pdb
+C:\Users\LasseSkjøtt\Desktop\HTTPServer123\obj\Debug\SocketConcurrent.csprojResolveAssemblyReference.cache
