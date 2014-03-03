@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +39,6 @@ namespace SocketConcurrent
 
             if (File.Exists(path))
             {
-            //    message = sr.ReadLine();
                 sw.Write("HTTP/1.0 200 OK \r\n");
                 sw.Write("\r\n");
 
@@ -57,7 +55,7 @@ namespace SocketConcurrent
             }
             else
             {
-                sw.Write("Can't find the requested file. Try again");
+                sw.Write("Can't find the requested file");
             }
 
             connectionSocket.Close();

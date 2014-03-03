@@ -27,6 +27,23 @@ namespace SocketConcurrent
             sw.AutoFlush = true; // enable automatic flushing
 
             string message = sr.ReadLine();
+<<<<<<< HEAD
+            string answer;
+            sw.Write("HTTP/1.0 200 OK \r\n");
+            sw.Write("\r\n");
+            sw.WriteLine("Message");
+            sw.WriteLine("Hello");
+            //while (message != null && message != "")
+            //{
+            //    Console.WriteLine("Client: " + message);
+            //    answer = message.ToUpper();
+            //    sw.Write("HTTP/1.0 200 OK \r\n ");
+            //    sw.Write("\r\n");
+            //    sw.WriteLine("Message");
+            //    message = sr.ReadLine();
+
+            //}
+=======
             Console.WriteLine(message);
 
             string[] words = message.Split('/');
@@ -40,7 +57,6 @@ namespace SocketConcurrent
 
             if (File.Exists(path))
             {
-            //    message = sr.ReadLine();
                 sw.Write("HTTP/1.0 200 OK \r\n");
                 sw.Write("\r\n");
 
@@ -57,9 +73,10 @@ namespace SocketConcurrent
             }
             else
             {
-                sw.Write("Can't find the requested file. Try again");
+                sw.Write("Can't find the requested file");
             }
 
+>>>>>>> ReadFile
             connectionSocket.Close();
         }
 
