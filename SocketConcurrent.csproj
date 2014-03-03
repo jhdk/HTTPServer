@@ -41,10 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EchoService.cs" />
     <Compile Include="EchoService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TCPEchoServer2.cs" />
     <Compile Include="TCPEchoServer3.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -23,7 +23,7 @@ namespace SocketConcurrent
             {
                 TcpClient connectionSocket = serverSocket.AcceptTcpClient();
                 
-                Console.WriteLine("Server activated now");
+                Console.WriteLine("Server activated now!");
                 EchoService1 service = new EchoService1(connectionSocket);
                 //Thread myThread = new Thread(new ThreadStart(service.DoIt));
                 //myThread.Start();
