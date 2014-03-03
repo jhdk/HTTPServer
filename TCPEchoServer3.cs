@@ -29,6 +29,8 @@ namespace SocketConcurrent
                 //myThread.Start();
 
                 Task.Factory.StartNew(service.DoIt);
+                
+                
                 // or use delegates Task.Factory.StartNew() => service.DoIt();
             }
 

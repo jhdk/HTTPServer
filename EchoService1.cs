@@ -57,7 +57,7 @@ namespace SocketConcurrent
             }
             else
             {
-                sw.Write("Can't find the requested file. Try again");
+                sw.Write("Can't find the requested file");
             }
 
             connectionSocket.Close();
