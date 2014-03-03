@@ -10,3 +10,18 @@ C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent
 C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.exe
 C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\bin\Debug\SocketConcurrent.pdb
 C:\Users\Ji\Desktop\SocketConcurrent\SocketConcurrent\obj\Debug\SocketConcurrent.csprojResolveAssemblyReference.cache
+C:\Users\Nicolai\Desktop\HTTPServer\bin\Debug\SocketConcurrent.exe.config
+C:\Users\Nicolai\Desktop\HTTPServer\obj\Debug\SocketConcurrent.exe
+C:\Users\Nicolai\Desktop\HTTPServer\obj\Debug\SocketConcurrent.pdb
+C:\Users\Nicolai\Desktop\HTTPServer\bin\Debug\SocketConcurrent.exe
+C:\Users\Nicolai\Desktop\HTTPServer\bin\Debug\SocketConcurrent.pdb
+C:\Users\Nicolai\Desktop\HTTPServer\obj\Debug\SocketConcurrent.csprojResolveAssemblyReference.cache
+C:\Users\Nicolai\Desktop\http server\HTTPServer\bin\Debug\SocketConcurrent.exe.config
+C:\Users\Nicolai\Desktop\http server\HTTPServer\obj\Debug\SocketConcurrent.exe
+C:\Users\Nicolai\Desktop\http server\HTTPServer\obj\Debug\SocketConcurrent.pdb
+C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\bin\Debug\SocketConcurrent.exe.config
+C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\obj\Debug\SocketConcurrent.exe
+C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\obj\Debug\SocketConcurrent.pdb
+C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\bin\Debug\SocketConcurrent.exe
+C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\bin\Debug\SocketConcurrent.pdb
+C:\Users\Nicolai\Documents\Visual Studio 2013\Projects\http server\HTTPServer\obj\Debug\SocketConcurrent.csprojResolveAssemblyReference.cache
