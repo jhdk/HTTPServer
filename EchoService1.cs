@@ -1,54 +1,68 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.IO;
+using log4net;
+using log4net.Config;
 
 namespace SocketConcurrent
 {
     public class EchoService1
     {
-        private TcpClient connectionSocket;
-        private static readonly string RootCatalog = "c:/temp/";
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(EchoService1));
+        private readonly TcpClient _connectionSocket;
+        private const string RootCatalog = "c:/temp/";
 
         public EchoService1(TcpClient connectionSocket)
         {
-            // TODO: Complete member initialization
-            this.connectionSocket = connectionSocket;
+            _connectionSocket = connectionSocket;
         }
+        /// <summary>
+        /// DoIt methods creates streams to write and recieve messages.
+        /// It splits the message up to get the file name.
+        /// If file exists, give HTTP OK response.
+        /// If file doesn't exist, give HTTP Not Found response.
+        /// </summary>
         public void DoIt()
         {
-            Stream ns = connectionSocket.GetStream();
-            StreamReader sr = new StreamReader(ns);
-            StreamWriter sw = new StreamWriter(ns);
-            sw.AutoFlush = true; // enable automatic flushing
+            try
+            {
+            var configFile = new FileInfo(@"..\..\logconfig.xml");
+            XmlConfigurator.Configure(configFile);
 
-            string message = sr.ReadLine();
-            Console.WriteLine(message);
+            Stream ns = _connectionSocket.GetStream();
+            var sr = new StreamReader(ns);
+            var sw = new StreamWriter(ns) {AutoFlush = true};
 
-            string[] words = message.Split('/');
-            message = words[1];
-            words = message.Split(' ');
-            message = words[0];
+            var message = sr.ReadLine();
+            Logger.Info(message);
 
-            Console.WriteLine(message);
+            if (message != null)
+            {
+                var words = message.Split('/');
+                message = words[1];
+                words = message.Split(' ');
+                message = words[0];
+            }
 
-            string path = RootCatalog + message;
+            Logger.Info(message);
+            string contentType = GetContentType(message);
+            Logger.Info("Content-Type: " + contentType);
+            var path = RootCatalog + message;
 
             if (File.Exists(path))
             {
-            //    message = sr.ReadLine();
-                sw.Write("HTTP/1.0 200 OK \r\n");
+                var f = new FileInfo(path);
+                sw.Write("HTTP/1.0 200 OK\r\n");
+                sw.Write("Content-Type:"+ contentType +"\r\n");
+                sw.Write("Content-Length:" + f.Length +"\r\n");
                 sw.Write("\r\n");
+                Logger.Info("OK");
 
-
-                using (FileStream fs = File.OpenRead(path))
+                using (var fs = File.OpenRead(path))
                 {
-                    byte[] b = new byte[1024];
-                    UTF8Encoding temp = new UTF8Encoding(true);
+                    var b = new byte[1024];
+                    var temp = new UTF8Encoding(true);
                     while (fs.Read(b, 0, b.Length) > 0)
                     {
                         sw.WriteLine(temp.GetString(b));
@@ -57,12 +71,58 @@ namespace SocketConcurrent
             }
             else
             {
+                sw.Write("HTTP/1.0 404 Not Found\r\n");
+                sw.Write("\r\n");
                 sw.Write("Can't find the requested file");
+                Logger.Info("Can't find the requested file");
             }
 
-            connectionSocket.Close();
+            _connectionSocket.Close();
+            }
+            catch (Exception ex)
+            {
+                Logger.Info("Error message: " + ex.Message);
+            }
         }
 
-        public string answer { get; set; }
+        public static String GetContentType(String filename)
+        {
+            try
+            {
+            var s = filename;
+            var found = s.IndexOf(".", StringComparison.Ordinal);
+            var file = (s.Substring(found + 1));
+
+            if (file == "html" || file == "htm")
+            {
+                return "text/html";
+            }
+            if (file == "gif")
+            {
+                return "image/gif";
+            }
+            if (file == "jpeg")
+            {
+                return "image/jpeg";
+            }
+            if (file == "pdf")
+            {
+                return "application/pdf";
+            }
+            if (file == "css")
+            {
+                return "text/css";
+            }
+                return "text/plain";
+            }
+            catch (Exception ex)
+            {
+                Logger.Info("Error message: " + ex.Message);
+                return "text/plain"; 
+            }
+
+        }
+
+        public string Answer { get; set; }
     }
 }

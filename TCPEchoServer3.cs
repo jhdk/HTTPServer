@@ -1,37 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace SocketConcurrent
 {
-    public class TCPEchoServer3
+    public class TcpEchoServer3
     {
         public static void Main(string[] args)
         {
-            IPAddress ip = IPAddress.Parse("192.168.43.72");
-            TcpListener serverSocket = new TcpListener(ip, 8080);
+            IPAddress.Parse("192.168.43.72");
+            var serverSocket = new TcpListener(8080);
 
-            //TcpListener serverSocket = new TcpListener(8080);
             serverSocket.Start();
 
             while (true)
             {
                 TcpClient connectionSocket = serverSocket.AcceptTcpClient();
                 
-                Console.WriteLine("Server activated now");
-                EchoService1 service = new EchoService1(connectionSocket);
-                //Thread myThread = new Thread(new ThreadStart(service.DoIt));
-                //myThread.Start();
+                Console.WriteLine("Server activated now!");
+                var service = new EchoService1(connectionSocket);
 
                 Task.Factory.StartNew(service.DoIt);
-                
-                
-                // or use delegates Task.Factory.StartNew() => service.DoIt();
+              
             }
 
             
