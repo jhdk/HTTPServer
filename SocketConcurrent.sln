@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketConcurrent", "SocketConcurrent.csproj", "{092614C3-9940-467A-BA7A-D6BB4890DE6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpServerTestProject", "SimpleHttpServerTestProject\SimpleHttpServerTestProject.csproj", "{067573C1-EA6F-46EA-8E4F-26D687F3948E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPServerTest", "..\HTTPServerTest\HTTPServerTest.csproj", "{D66E6D59-74A5-4809-88D9-D59D1A9433B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

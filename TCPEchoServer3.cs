@@ -13,8 +13,8 @@ namespace SocketConcurrent
     {
         public static void Main(string[] args)
         {
-            IPAddress ip = IPAddress.Parse("10.154.2.92");
-            TcpListener serverSocket = new TcpListener(8080);
+            IPAddress ip = IPAddress.Parse("192.168.43.72");
+            TcpListener serverSocket = new TcpListener(ip, 8080);
 
             //TcpListener serverSocket = new TcpListener(8080);
             serverSocket.Start();
@@ -23,7 +23,7 @@ namespace SocketConcurrent
             {
                 TcpClient connectionSocket = serverSocket.AcceptTcpClient();
                 
-                Console.WriteLine("Server activated now!");
+                Console.WriteLine("Server activated now");
                 EchoService1 service = new EchoService1(connectionSocket);
                 //Thread myThread = new Thread(new ThreadStart(service.DoIt));
                 //myThread.Start();
